@@ -1,0 +1,199 @@
+body,
+html {
+  width: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+.breaking-news-title {
+  background-color: #d9a3a7;
+  display: block;
+  height: 66px;
+  width: 260px;
+  font-family: arial;
+  font-size: 36px;
+  position: absolute;
+  top: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-top: 34px;
+  padding-left: 10px;
+  z-index: 3;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    top: 0;
+    left: -12px;
+    border-left: 12px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 100px solid #d9a3a7;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    right: -12px;
+    top: 0;
+    border-right: 12px solid transparent;
+    border-left: 0px solid transparent;
+    border-top: 100px solid #d9a3a7;
+  }
+}
+
+#breaking-news-colour {
+  height: 100px;
+  width: 100%;
+  background-color: #8da1cd;
+}
+
+#breaking-news-container {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  &:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #8da1cd;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+.delay-animated {
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.scroll-animated {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 3s;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.fadein {
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    margin-left: 85%;
+  }
+  to {
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    margin-left: 85%;
+  }
+  to {
+  }
+}
+
+.slidein {
+  -webkit-animation-name: slidein;
+  -moz-animation-name: slidein;
+  -o-animation-name: slidein;
+  animation-name: slidein;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+.marquee {
+  height: 40px;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 36px;
+  color: black;
+  font-family: arial;
+
+  position: relative;
+  background-color: none;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+
+  padding: 30px;
+  animation: marquee 10s linear infinite;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 85%;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+@-moz-keyframes slidein {
+  from {
+    margin-left: 85%;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+.slideup {
+  -webkit-animation-name: slideup;
+  -moz-animation-name: slideup;
+  -o-animation-name: slideup;
+  animation-name: slideup;
+}
+@-webkit-keyframes slideup {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@-moz-keyframes slideup {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+#image_location {
+  display: block;
+  margin: auto;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+  z-index: 0;
+}
